@@ -34,6 +34,15 @@ export default function Home() {
           >
             <p className='text-black  '>Resume</p>
         </Link>
+        <Link 
+          className='hover:font-semibold 
+          bg-gray-200 p-4 rounded-md shadow-md
+           hover:bg-gray-300 mb-4'
+          href="https://github.com/phscloq"
+          target='_blank'
+          >
+            <p className='text-black  '>GitHub</p>
+        </Link>
      </div>
      
  </main>
