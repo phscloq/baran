@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import ProjectCard from './components/project-card'
+import Skills from './components/skills'
 export default function Home() {
   return (
-    <main className=" min-h-screen flex flex-col justify-center items-center   bg-slate-400 ">
-      <div className=' bg-slate-600 sm:rounded-[2.5rem] sm:max-w-[41.5rem] sm:px-20  mt-12 h-screen w-full flex flex-col  text-center items-center p-4'>
+    <main className=" min-h-screen flex flex-col justify-center items-center  bg-slate-400">
+      <div className=' bg-slate-600 sm:rounded-[2.5rem] sm:max-w-[41.5rem] sm:px-20  
+      mt-12  w-full flex flex-col  text-center items-center p-4 shadow-md shadow-slate-600'>
             <div className='flex flex-col items-center mb-6'>
                 <div className='relative  w-[144px] h-[144px] rounded-full overflow-hidden'>
                   <Image className=' rounded-full max-w-full' src="/images/baran.jpg" alt="Profile" width={144} height={144} />
@@ -31,30 +34,38 @@ export default function Home() {
                 </div>
             </div>
 
-          <ul className='flex flex-col items-center sm:min-w-full'>
-            <li className='sm:min-w-full'>
-              <div className=' bg-slate-500 h-56 w-96 sm:min-w-full rounded-2xl flex'>
-                  <Image className='max-h-[224px] min-w-[384px]' src="/images/women-page.png" alt="Women Page Screenshot" width={384} height={221} />
-                  <div className='flex justify-center '>
-                    <Link href="https://github.com/phscloq"
-                        target='_blank'>
-                        <Image className='' src="/icons/github.svg" alt="GitHub" width={48} height={48} />
-                    </Link>
-                  </div>
-                  
-              </div>
+          <ul className='grid grid-cols-3  gap-8 sm:min-w-full mb-16'>
+            <li className=' col-span-3'>
+              <Skills />
             </li>
-            
+            <li className=' col-span-3'>
+             <ProjectCard
+              img="/images/shopping-cart-women-page.png"
+              title="Shopping Cart"
+              demo="https://shopping-site-rho.vercel.app/"
+              github="https://github.com/phscloq/shopping-site"
+             />
+            </li>
+            <li className=' col-span-3'>
+             <ProjectCard
+              img="/images/ui-page.png"
+              title="Baran UI"
+              demo="https://ui-library-seven.vercel.app/"
+              github="https://github.com/phscloq/ui-library"
+             />
+            </li>
           </ul>
-          <footer className=' text-center absolute bottom-0
-          '>
-            <p className='text-white select-all'>y.barandgn@gmail.com</p>
-          </footer> 
+           
       </div>
-
+      <footer className=' h-36  gap-2 flex justify-center items-center
+            '>
+              <p className='text-slate-700  font-extrabold '>Email: </p>
+              <p className='text-slate-700 font-bold select-all'>y.barandgn@gmail.com</p>
+      </footer> 
  </main>
   )
 }
+{/*  */}
 {/* <Link 
 className='hover:font-semibold  hover:bg-gray-300
   bg-gray-200 p-4 rounded-md shadow-md
