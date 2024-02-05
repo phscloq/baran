@@ -44,7 +44,7 @@ export default function Home() {
 
                     <Link href="https://drive.google.com/file/d/1yccW_UpiUtBFiTFO_VauYG5FJbw3-IlE/view?usp=sharing"
                       target="_blank" 
-                      className=" text-3xl font-bold">
+                      className="text-black text-3xl font-bold">
                         CV 
                     </Link>
                 </div>
