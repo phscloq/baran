@@ -19,8 +19,10 @@ export default function ProjectCard({img, title, demo, github}: ProjectCardProps
             </div>
 
             <div className='flex items-end px-4 pb-1  justify-between z-10 w-full'>
-              <Link href={demo} target='_blank'>
-                <p className='hover:underline font-extrabold'>{title}</p>
+              <Link href={demo} className="hover:underline" target='_blank'>
+                <p className=' font-extrabold relative'>{title}
+                <span className="absolute -top-1 -right-4 -rotate-45 text-sm ">{'->'}</span>
+                </p>
               </Link>
 
               <Link href={github}
