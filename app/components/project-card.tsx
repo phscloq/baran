@@ -10,10 +10,10 @@ type ProjectCardProps = {
 export default function ProjectCard({img, title, demo, github}: ProjectCardProps){
     return (
        
-        <div className=' relative bg-slate-500  min-h-72 w-96 sm:min-w-full rounded-2xl overflow-hidden   shadow-lg  shadow-slate-900 flex'>
+        <div className=' relative bg-slate-500  min-h-64  sm:min-h-72 w-96 sm:min-w-full rounded-2xl overflow-hidden   shadow-lg  shadow-slate-900 flex'>
             
             <div className='absolute top-0 left-0 w-full '>
-              <Image className=' min-w-[384px] w-full min-h-72' 
+              <Image className=' min-w-[384px] w-full min-h-64 sm:min-h-72' 
               src={img} alt="Women Page Screenshot" 
               width={384} height={221} />
             </div>
