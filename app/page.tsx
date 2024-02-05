@@ -6,9 +6,9 @@ import Skills from './components/skills'
 //import OpenToWork from './components/open-to-work'
 export default function Home() {
   return (
-    <main className=" min-h-screen flex flex-col justify-center items-center  bg-slate-400 pt-8">
+    <main className=" min-h-screen flex flex-col justify-center items-center  bg-slate-400 sm:pt-8">
        
-       <div className=''>
+       <div className='hidden sm:block'>
           <h1 className=' sm:text-3xl text-5xl font-bold text-slate-800'>
             Philosopher Turned Frontend Enchanter
           </h1>
@@ -16,8 +16,13 @@ export default function Home() {
 
       <div className='relative bg-slate-600 sm:rounded-[2.5rem] sm:max-w-[41.5rem] 
       sm:px-20  
-      mt-12  w-full flex flex-col  text-center items-center p-4 shadow-md
+      sm:mt-12  w-full flex flex-col  text-center items-center p-4 shadow-md
        shadow-slate-600'>
+          <div className='sm:hidden mb-4'>
+          <h1 className=' text-2xl font-bold text-slate-900'>
+            Philosopher Turned Frontend Enchanter
+          </h1>
+        </div>
             <div className='flex flex-col items-center mb-6'>
                 <div className='relative  w-[144px] h-[144px] rounded-full overflow-hidden'>
                   <Image className=' rounded-full max-w-full' src="/images/baran.jpg" alt="Profile" width={144} height={144} />
@@ -56,7 +61,7 @@ export default function Home() {
               </li>
 
               <li className=' col-span-3'>
-              <div className=' text-left mb-2'>
+              <div className=' text-left mb-1'>
                 <h2 className='text-2xl font-bold text-white'>Projects</h2>
               </div>
               <ProjectCard
@@ -75,9 +80,13 @@ export default function Home() {
               />
               </li>
             </ul>
-           
+            <footer className='text-white h-36  w-full gap-2 sm:hidden flex justify-center items-center
+            '>
+              <p className='  font-extrabold '>Email: </p>
+              <p className=' font-bold select-all'>y.barandgn@gmail.com</p>
+      </footer> 
       </div>
-      <footer className=' h-36  gap-2 flex justify-center items-center
+      <footer className='hidden h-36  gap-2 sm:flex justify-center items-center
             '>
               <p className='text-slate-700  font-extrabold '>Email: </p>
               <p className='text-slate-700 font-bold select-all'>y.barandgn@gmail.com</p>
