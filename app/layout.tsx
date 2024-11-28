@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from './light-context'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +16,25 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script 
+         dangerouslySetInnerHTML={{
+          __html: `
+          (function() {
+              const storedTheme = localStorage.getItem('theme');
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+              console.log('Inline script executed. Theme:', theme);
+              document.documentElement.classList.toggle('dark', theme === 'dark');
+          })();
+          `,
+      }}
+        />
+      </head>
+      <ThemeProvider>
       <body className={inter.className}>{children}</body>
+      </ThemeProvider>
     </html>
   )
 }
