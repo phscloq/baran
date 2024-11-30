@@ -1,68 +1,78 @@
 import Link from "next/link";
 import Image from "next/image";
+import Badge from "./badge";
 type ProjectCardProps = {
     img: string;
     title: string;
-    demo: string;
-    github: string;
+    demo?: string;
+    github?: string;
     alt:string;
     big: boolean;
+    techStack: string[];
+    description: string;
     }
 
-export default function ProjectCard({img, title, demo, github, alt,big}: ProjectCardProps){
+export default function ProjectCard({img, title, demo, github, alt,big, techStack, description}: ProjectCardProps){
     return (
-       <>
-        {
-          big ? (<div className=' relative bg-slate-500  min-h-64  sm:min-h-72 w-96 sm:min-w-full rounded-2xl overflow-hidden   shadow-lg  shadow-slate-900 flex'>
-            
-            <div className='absolute top-0 left-0 w-full '>
-              <img className=' min-w-[384px] w-full min-h-64 sm:min-h-72' 
-              src={img} alt={alt} 
-              width={384} height={221} />
-            </div>
-
-            <div className='flex items-end px-4 pb-1  justify-between z-10 w-full'>
-              <Link href={demo} className="hover:underline text-black" target='_blank'>
-                <p className=' font-extrabold relative'>{title}
-                <span className="absolute -top-1 -right-4 -rotate-45 text-sm ">{'->'}</span>
-                </p>
-              </Link>
-
-              <Link href={github}
-                  target='_blank'>
-                  <img className='' src="/icons/github.svg" alt="GitHub" width={48} height={48} />
-              </Link>
-            </div>
-        </div>)
-      :(
-        <div className=' relative bg-slate-500 
-        rounded-2xl overflow-hidden    min-h-[126px] min-w-[220px]
-        shadow-lg  shadow-slate-900 flex'>
-            
-            <div className='absolute top-0 left-0 w-full h-full'>
-              <img className='  object-contain h-full w-full ' 
-              src={img} alt={alt} 
-              />
-            </div>
-
-            <div className='flex items-end px-4 pb-1  justify-between z-10 w-full'>
-              <Link href={demo} className="hover:underline text-black text-sm" target='_blank'>
-                <p className=' font-extrabold relative'>{title}
-                <span className="absolute -top-1 -right-4 -rotate-45 text-sm ">{'->'}</span>
-                </p>
-              </Link>
-
-              <Link href={github}
-                  target='_blank'>
-                  <img className='' src="/icons/github.svg" alt="GitHub" width={28} height={28} />
-              </Link>
+     
+      <div className="bg-white  dark:bg-slate-600 border dark:border-slate-700 rounded-md overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+        <div className="relative">
+          <div className=" min-h-36">
+            <img src={img} alt={alt} />
+          </div>
+          <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
+            {demo && 
+          <Link href={demo}>
+          View Project
+        </Link>        
+          }
+          {!demo && github &&
+          <Link href={github}>
+          View Repo
+        </Link>
+          }
+          </div>
+        </div>
+        {/* Card content */}
+        <div className="p-4">
+            <h3 className="text-xl font-semibold mb-2
+            text-gray-800 dark:text-white">
+                {title}
+            </h3>
+            <p className=" text-gray-600 dark:text-slate-300">
+                {description}
+            </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {techStack.map((tech)=>(
+                <Badge key={tech}>{tech}</Badge>
+              ))}
             </div>
         </div>
-      )
-      }
-          </>
+        {/* Card footer */}
+        <div className="flex justify-between p-4 pt-0">
+              {demo && 
+              <Link href={demo}>
+                <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
+                hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
+                ">
+                  Demo
+                </button>
+              </Link>}
 
-    )
+              {github && 
+              <Link href={github}>
+                <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
+                hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
+                ">
+                  GitHub
+                </button>
+              </Link>}
+        </div>
+      </div>
+
+      )
+    
+         
 }
 
 //hover css for the card
