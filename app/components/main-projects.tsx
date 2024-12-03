@@ -16,7 +16,7 @@ export default function MainProjects(){
             alt:"UI page screenshot",
             description: "A collection of reusable UI components for rapid web development.",
             img:"/images/ui-page.png",
-            demo:"https://ui-library-seven.vercel.app/",
+            demo:"https://ui.ybarandogan.com",
             github:"https://github.com/phscloq/ui-library",
             technologies: ["NextJs", "React", "TypeScript", "TailwindCSS", "Supabase", "Vercel", "Git", "GitHub"],
         },
