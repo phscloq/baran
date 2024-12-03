@@ -7,9 +7,9 @@ export default function MiniProjects(){
             title: "Guess the Color!",
             description: "An HEX color guessing game",
             alt:"Guess the Color! An HEX color guessing game",
-            img: "/images/habits-warrior.png",
+            img: "/images/guess-the-color.png",
             demo: "https://habitswarrior.com/",
-            github:"https://shopping-site-rho.vercel.app/",
+            github:"https://github.com/phscloq/guess-the-color",
             technologies: ["NextJs", "React", "TypeScript", "TailwindCSS", "Supabase", "Vercel", "Git", "GitHub"],
         },
         {
@@ -18,7 +18,7 @@ export default function MiniProjects(){
             alt:"A flight search web app based on mock data",
             img:"/images/shopping-cart-women-page.png",
             demo:"https://shopping-site-rho.vercel.app/",
-            github:"https://github.com/phscloq/shopping-site",
+            github:"https://github.com/phscloq/flight-search-app",
             technologies: ["NextJs", "React", "TypeScript", "TailwindCSS", "Supabase", "Vercel", "Git", "GitHub"],
         },
         {
@@ -26,8 +26,7 @@ export default function MiniProjects(){
             description: "Mobile app for election observers to document and report election processes.",
             alt:"A mobile app to help observersin elections",
             img:"/images/ui-page.png",
-            demo:"https://ui-library-seven.vercel.app/",
-            github:"https://github.com/phscloq/ui-library",
+            github:"https://github.com/phscloq/secim-app",
             technologies: ["NextJs", "React", "TypeScript", "TailwindCSS", "Supabase", "Vercel", "Git", "GitHub"],
         },
         {
@@ -35,7 +34,8 @@ export default function MiniProjects(){
             description: "Collection of advanced CSS implementations showcasing frontend expertise.",
             alt:"A repo of the CSS challanges I've done",
             img:"/images/ui-page.png",
-            github:"https://github.com/phscloq/ui-library",
+            demo:"https://challenges-inky.vercel.app",
+            github:"https://github.com/phscloq/challenges",
             technologies: ["NextJs", "React", "TypeScript", "TailwindCSS", "Supabase", "Vercel", "Git", "GitHub"],
         },
 
