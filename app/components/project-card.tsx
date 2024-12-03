@@ -55,7 +55,7 @@ export default function ProjectCard({img, title, demo, github, alt,big, techStac
                 <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
                 hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
                 ">
-                  Demo
+                  Live
                 </button>
               </Link>}
 
