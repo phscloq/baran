@@ -22,7 +22,7 @@ export default function ProjectCard({img, title, demo, github, alt,big, techStac
           </div>
           <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
             {demo && 
-          <Link href={demo}>
+          <Link href={`/${title.toLowerCase().replace(/ /g, '-')}`}>
           View Project
         </Link>        
           }
