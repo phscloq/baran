@@ -1,7 +1,11 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import Tooltip from "./tooltip";
 
 export default function ProfileInfo(){
+
+
+
     return (
         <div className='flex flex-col items-center mb-6 justify-center'>
             <div className="relative w-36 h-36 rounded-full p-1 bg-gradient-to-r dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 from-blue-600 via-purple-600 to-pink-600">
@@ -32,6 +36,11 @@ export default function ProfileInfo(){
                 className=" border px-4 py-2 rounded-md">
                     View CV 
                 </Link>
+
+                <Tooltip text="Copy Email">   
+                    <Mail className="h-6 w-6" />
+                </Tooltip>
+
             </div>
         </div>
     )
