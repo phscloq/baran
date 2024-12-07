@@ -5,7 +5,7 @@ export default function MiniProjects(){
     const projects = [
         {
             title: "Guess the Color!",
-            description: "An HEX color guessing game",
+            description: "An HEX color guessing game. Test your knowledge of HEX colors!",
             alt:"Guess the Color! An HEX color guessing game",
             img: "/images/guess-the-color.png",
             demo: "https://phscloq.github.io/guess-the-color/",
@@ -30,9 +30,9 @@ export default function MiniProjects(){
             technologies: ["NextJs", "React", "TypeScript", "TailwindCSS", "Supabase", "Vercel", "Git", "GitHub"],
         },
         {
-            title: "CSS Challanges",
+            title: "CSS Challenges",
             description: "Collection of advanced CSS implementations showcasing frontend expertise.",
-            alt:"A repo of the CSS challanges I've done",
+            alt:"A repo of the CSS challenges I've done",
             img:"/images/ui-page.png",
             demo:"https://challenges-inky.vercel.app",
             github:"https://github.com/phscloq/challenges",
@@ -43,10 +43,10 @@ export default function MiniProjects(){
     return (
         <section id="mini-projects" className="mt-16">
             <h2 className="text-2xl font-bold mb-8">Other Projects</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3  gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
                 {projects.map((project)=>(
                     <ProjectCard
-                    big={false}
+                    big={true}
                     img={project.img}
                     title={project.title}
                     demo={project.demo}
