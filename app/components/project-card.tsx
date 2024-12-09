@@ -21,16 +21,13 @@ export default function ProjectCard({img, title, demo, github, alt,big, techStac
             <img src={img} alt={alt} />
           </div>
           <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
-            {demo && 
-          <Link href={`/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`}>
+           
+          <Link href={`/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`} target="_blank">
           View Project
         </Link>        
-          }
-          {!demo && github &&
-          <Link href={github}>
-          View Repo
-        </Link>
-          }
+          
+         
+          
           </div>
         </div>
         {/* Card content */}
@@ -51,7 +48,8 @@ export default function ProjectCard({img, title, demo, github, alt,big, techStac
         {/* Card footer */}
         <div className="flex justify-between p-4 pt-0">
               {demo && 
-              <Link href={demo}>
+              <Link href={demo}
+              target="_blank">
                 <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
                 hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
                 ">
@@ -60,7 +58,9 @@ export default function ProjectCard({img, title, demo, github, alt,big, techStac
               </Link>}
 
               {github && 
-              <Link href={github}>
+              <Link href={github}
+              target="_blank"
+              >
                 <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
                 hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
                 ">
