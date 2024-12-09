@@ -66,7 +66,7 @@ export default function ProjectPage({params}:{params:{slug:string}}){
                 {/* Links for demo and github */}
                 <div className="flex justify-between mt-8">
                   {project.liveUrl && 
-                  <Link href={project.liveUrl}>
+                  <Link href={project.liveUrl} target="_blank">
                     <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
                     hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
                     ">
@@ -75,7 +75,7 @@ export default function ProjectPage({params}:{params:{slug:string}}){
                   </Link>}
 
                   {project.githubUrl && 
-                  <Link href={project.githubUrl}>
+                  <Link href={project.githubUrl} target="_blank">
                     <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
                     hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
                     ">
