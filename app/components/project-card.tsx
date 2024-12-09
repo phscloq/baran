@@ -20,14 +20,10 @@ export default function ProjectCard({img, title, demo, github, alt,big, techStac
           <div className=" min-h-36">
             <img src={img} alt={alt} />
           </div>
-          <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
-           
-          <Link href={`/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`} target="_blank">
-          View Project
-        </Link>        
-          
-         
-          
+          <div className="absolute inset-0 bg-black bg-opacity-50  animate-pulse-slow sm:animate-none opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
+            <Link href={`/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`} target="_blank">
+            View Project
+            </Link>        
           </div>
         </div>
         {/* Card content */}
