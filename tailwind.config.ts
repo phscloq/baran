@@ -13,6 +13,16 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      animation: {
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) forwards'
+      },
+      keyframes:{
+        pulse:{
+          '0%': { opacity: '0.2' },
+          '50%': { opacity: '0.5' },
+          '100%': { opacity: '1 0' },
+        }
+      },
     },
   },
   plugins: [],
