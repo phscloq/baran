@@ -9,26 +9,27 @@ const handleCopyEmail = async ()=>{
         await navigator.clipboard.writeText('y.barandgn@gmail.com');
         setTooltipText('Copied!');
 
-        setTimeout(()=> setTooltipText(text), 1000);
+        setTimeout(()=> setTooltipText(text), 2000);
 
     }catch(error){
         console.error("Failed to copy email:", error);
             setTooltipText("Failed to copy!");
-            setTimeout(() => setTooltipText(text), 1000);
+            setTimeout(() => setTooltipText(text), 2000);
     }
     
 }
 
     return (
         <div className="relative group">
-            <button className="border px-4 py-2 rounded-md"
-            onClick={handleCopyEmail}>
-                {children}
-            </button>
-            <div className={`absolute  bottom-11 ${tooltipText === 'Copied!' ? '-left-2' : '-left-[22px]'} bg-slate-800 text-white p-2  whitespace-nowrap opacity-0 group-hover:opacity-100 rounded-md transition-opacity duration-300`}>
+                <button className="border px-4 py-2 rounded-md "
+                onClick={handleCopyEmail}>
+                    {children}
+                </button>
+            <div className={`absolute  bottom-11 ${tooltipText === 'Copied!' ? '-left-2' : '-left-[22px]'} bg-slate-800 text-white p-2  whitespace-nowrap opacity-0 group-hover:opacity-100 rounded-md transition-opacity duration-300 pointer-events-none`}>
                 {tooltipText}
             </div>
         </div>
     )
 
 }
+
