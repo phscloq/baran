@@ -14,7 +14,7 @@ export default function Skills(){
                 {techStack.map(({ category, technologies }) => (
                     <div key={category} className="mb-4">
                         <h1>{category}</h1>
-                        <div className="flex gap-2 mt-2">
+                        <div className="flex gap-2 mt-2 flex-wrap">
                         {technologies.map((title)=>{
                             return(
                                 <Badge key={title}>{title}</Badge>
