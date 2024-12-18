@@ -22,7 +22,10 @@ export default function ProjectPage({params}:{params:{slug:string}}){
             <div className='bg-white dark:bg-slate-700 p-8 rounded-[2.5rem] shadow-md '>
                 <h1 className="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">{project.title}</h1>
                 <div className="mb-8">
-                    <img src={project.image} alt={project.title} className="w-full  object-fill rounded-lg" />
+                    <img src={project.image} alt={project.title} className="w-full dark:hidden  object-fill  rounded-lg" />
+                    {project.darkThemedImage ?
+                     <img src={project.darkThemedImage} alt={project.title} className="w-full hidden dark:block dark:opacity-100  object-fill  rounded-lg" />:
+                     <img src={project.image} alt={project.title} className="w-full hidden dark:block dark:opacity-100  object-fill  rounded-lg" />}
                 </div>
 
                 <div className="mb-6">
