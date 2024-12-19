@@ -1,9 +1,9 @@
 'use client'
 import { useEffect, useState } from "react"
-import { projectsData } from "../data/projects"
-import Container from "../components/container"
-import Navbar from "../components/navbar"
-import Badge from "../components/badge"
+import { projectsData } from "../../data/projects"
+import Container from "../../components/container"
+import Navbar from "../../components/navbar"
+import Badge from "../../components/badge"
 import Link from "next/link"
 export default function ProjectPage({params}:{params:{slug:string}}){
     const [project, setProject] = useState<any>(null)
