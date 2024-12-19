@@ -25,7 +25,7 @@ export default function Education(){
     return (
         <section id="education" className="mt-16">
             <div className="space-y-4">
-                <h2 className="text-2xl font-bold mb-8">Education</h2>
+                <h2 className="text-2xl font-bold ">Education</h2>
                 {education.map(({ school, degree, year, location }) => (
                     <div key={school} className="mb-4 bg-slate-100 dark:bg-slate-600 py-4 px-3 rounded-md">
                         <h1 className="font-bold">{degree}</h1>

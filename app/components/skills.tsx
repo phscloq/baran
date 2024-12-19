@@ -8,8 +8,8 @@ export default function Skills(){
     ]
 
     return (
-        <section id="skills">
-            <h2 className="text-2xl font-bold mb-8">Skills</h2>
+        <section id="skills" className="space-y-4">
+            <h2 className="text-2xl font-bold ">Skills</h2>
             <div className=" space-y-4">
                 {techStack.map(({ category, technologies }) => (
                     <div key={category} className="mb-4">
