@@ -19,12 +19,12 @@ export default function ProjectCard({img, darkThemedImage, title, demo, github, 
       <div className="bg-white  dark:bg-slate-600 border dark:border-slate-700 rounded-md overflow-hidden hover:-translate-y-1 transition-transform duration-300">
         <div className="relative">
           <div className=" min-h-36">
-            <img src={img} alt={title} className="w-full dark:hidden  object-fill  rounded-lg" />
+            <img src={img} alt={title} className="w-full dark:hidden  object-fill  " />
                     {darkThemedImage ?
-                     <img src={darkThemedImage} alt={title} className="w-full hidden dark:block dark:opacity-100  object-fill  rounded-lg" />:
-                     <img src={img} alt={title} className="w-full hidden dark:block dark:opacity-100  object-fill  rounded-lg" />}
+                     <img src={darkThemedImage} alt={title} className="w-full hidden dark:block dark:opacity-100  object-fill " />:
+                     <img src={img} alt={title} className="w-full hidden dark:block dark:opacity-100  object-fill " />}
           </div>
-          <div className="absolute inset-0 bg-black bg-opacity-50  animate-pulse-slow sm:animate-none opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
+          <div className="absolute inset-0 bg-black bg-opacity-50   animate-pulse-slow sm:animate-none opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
             <Link href={`/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`} target="_blank">
             View Project
             </Link>        
