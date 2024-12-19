@@ -67,6 +67,29 @@ export const sideProjects = [
 
 
 export const projectsData = {
+    'habits-warrior': {
+        title: "Habits Warrior",
+        description: "A habit tracking app that helps you build good habits and break bad ones.",
+        fullDescription: "Habits Warrior is a habit tracking app designed to help users build positive habits and break negative ones. The app features a clean and intuitive interface that allows users to set goals, track progress, and receive motivational reminders. With a focus on simplicity and usability, Habits Warrior empowers users to take control of their daily routines and achieve their personal goals.",
+        image: "/images/ui-page.png",
+        darkThemedImage: "",
+        liveUrl: "https://habitswarrior.com/",
+        githubUrl: "",
+        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Resend", "Vercel", "Git", "GitHub"],
+        features: [
+          "Goal setting and tracking",
+          "Daily habit reminders",
+          "Progress visualization",
+          "User account management",
+          "Data synchronization across devices",
+          "Dark mode support",
+          "Data management and API entegration",
+          "User authentication and authorization",
+          "User-friendly and responsive design"
+        ],
+        challenges: "The main challenge was implementing a robust data synchronization system that could handle real-time updates across multiple devices. This was achieved by leveraging Supabase's real-time database and authentication features.",
+        futureImprovements: "Future plans include adding social sharing features, implementing advanced habit tracking analytics, and expanding the app to support multiple languages"
+    },
     'baran-ui': {
       title: "Baran UI",
       description: "A comprehensive UI library featuring reusable components and consistent design patterns for rapid development.",
@@ -103,29 +126,6 @@ export const projectsData = {
       ],
       challenges: "One of the main challenges was implementing a seamless state management system that could handle complex cart operations while maintaining performance. This was overcome by leveraging React's Context API and custom hooks.",
       futureImprovements: "Future plans include integrating a backend API for real-time inventory management, implementing user reviews and ratings, and adding a recommendation system based on user browsing history."
-    },
-    'habits-warrior': {
-        title: "Habits Warrior",
-        description: "A habit tracking app that helps you build good habits and break bad ones.",
-        fullDescription: "Habits Warrior is a habit tracking app designed to help users build positive habits and break negative ones. The app features a clean and intuitive interface that allows users to set goals, track progress, and receive motivational reminders. With a focus on simplicity and usability, Habits Warrior empowers users to take control of their daily routines and achieve their personal goals.",
-        image: "/images/ui-page.png",
-        darkThemedImage: "",
-        liveUrl: "https://habitswarrior.com/",
-        githubUrl: "",
-        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Resend", "Vercel", "Git", "GitHub"],
-        features: [
-          "Goal setting and tracking",
-          "Daily habit reminders",
-          "Progress visualization",
-          "User account management",
-          "Data synchronization across devices",
-          "Dark mode support",
-          "Data management and API entegration",
-          "User authentication and authorization",
-          "User-friendly and responsive design"
-        ],
-        challenges: "The main challenge was implementing a robust data synchronization system that could handle real-time updates across multiple devices. This was achieved by leveraging Supabase's real-time database and authentication features.",
-        futureImprovements: "Future plans include adding social sharing features, implementing advanced habit tracking analytics, and expanding the app to support multiple languages"
     },
     'guess-the-color': {
         title: "Guess the Color!",
