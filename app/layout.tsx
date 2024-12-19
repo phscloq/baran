@@ -33,8 +33,10 @@ export default function RootLayout({
         />
       </head>
       <ThemeProvider>
-      <body className={`${inter.className}  bg-gradient-to-b  from-gray-50 to-gray-100
- dark:from-slate-900 dark:to-slate-800 `}>{children}</body>
+      <body className={`${inter.className} bg-gray-50  dark:bg-slate-900 `}
+      >
+          {children}
+      </body>
       </ThemeProvider>
     </html>
   )
