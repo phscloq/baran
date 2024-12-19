@@ -31,7 +31,7 @@ export default function ProfileInfo(){
                     <Linkedin className=" h-6 w-6" />
                 </Link>
 
-                <Link href="https://drive.google.com/file/d/1yccW_UpiUtBFiTFO_VauYG5FJbw3-IlE/view?usp=sharing"
+                <Link href="https://drive.google.com/file/d/1ykFfYig8ZmRqvrZWTxK4TZOO3LJxVAVs/view?usp=sharing"
                 target="_blank" 
                 className=" border px-4 py-2 rounded-md">
                     View CV 
