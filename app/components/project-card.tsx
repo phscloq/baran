@@ -48,25 +48,27 @@ export default function ProjectCard({img, darkThemedImage, title, demo, github, 
         {/* Card footer */}
         <div className="flex justify-between p-4 pt-0">
               {demo && 
-              <Link href={demo}
-              target="_blank">
+              <a href={demo}
+              target="_blank"
+              rel="noopener noreferrer">
                 <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
                 hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
                 ">
                   Live
                 </button>
-              </Link>}
+              </a>}
 
               {github && 
-              <Link href={github}
+              <a href={github}
               target="_blank"
+              rel="noopener noreferrer"
               >
                 <button className="bg-slate-200 text-black px-3 py-1 rounded-md 
                 hover:bg-slate-300  active:bg-slate-500 active:text-slate-100
                 ">
                   GitHub
                 </button>
-              </Link>}
+              </a>}
         </div>
       </div>
 
