@@ -24,10 +24,24 @@ export default function ProjectCard({img, darkThemedImage, title, demo, github, 
                      <img src={darkThemedImage} alt={title} className="w-full hidden dark:block dark:opacity-100  object-fill  " />:
                      <img src={img} alt={title} className="w-full hidden dark:block dark:opacity-100  object-fill " />}
           </div>
-          <div className="absolute inset-0 bg-black bg-opacity-50   animate-pulse-slow sm:animate-none opacity-0 hover:opacity-100 flex items-center justify-center transition-opacity duration-300 text-white font-bold text-lg">
-            <Link href={`/projects/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`} target="_blank">
-            View Project
-            </Link>        
+          <div className="absolute inset-0 flex  justify-center  text-white
+          bg-gradient-to-b from-transparent to-black opacity-70 items-end  dark:bg-none
+          sm:items-center sm:opacity-0 sm:hover:opacity-100 sm:bg-black sm:bg-opacity-50  sm:transition-opacity sm:duration-300"
+          >
+            <Link 
+              href={`/projects/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`} 
+              target="_blank"
+              className="hidden font-bold text-lg sm:block sm:opaciy-100 sm:transition-opacity sm:duration-300"
+              >
+                View Project
+            </Link>
+            <Link 
+              href={`/projects/${title.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '')}`} 
+              target="_blank"
+              className=" sm:hidden  p-1 font-bold  bg-black  rounded-md animate-bounce "
+              >
+                Tap to View
+            </Link>         
           </div>
         </div>
         {/* Card content */}
