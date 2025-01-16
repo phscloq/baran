@@ -23,7 +23,7 @@ export default function Education(){
     ];
 
     return (
-        <section id="education" className="mt-16">
+        <section id="education" className="mt-10">
             <div className="space-y-4">
                 <h2 className="text-2xl font-bold ">Education</h2>
                 {education.map(({ school, degree, year, location }) => (
