@@ -8,6 +8,7 @@ import MainProjects from './components/main-projects'
 import MiniProjects from './components/mini-projects'
 import Education from './components/education'
 import Summary from './components/summary'
+import Certificates from './components/certificates'
 //import OpenToWork from './components/open-to-work'
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <ProfileInfo />
         <Summary />
         <Skills />
+        <Certificates />
         <Education />
         <MainProjects />
         <MiniProjects />
